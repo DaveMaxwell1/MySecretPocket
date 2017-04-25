@@ -1,0 +1,80 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/card_margin"
+        android:elevation="3dp"
+        card_view:cardCornerRadius="@dimen/card_album_radius">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/backdrop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/backdropHeight"
+                android:background="@color/colorPrimary"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/goal_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/backdrop_title"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/backdrop_title" />
+
+                <TextView
+                    android:id="@+id/goal_subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/backdrop_subtitle"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/backdrop_subtitle"
+                    android:paddingBottom="18dp"
+                    />
+
+                <com.daimajia.numberprogressbar.NumberProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:id="@+id/number_progress_bar"
+                    app:progress_unreached_color="#CCCCCC"
+                    app:progress_reached_color="#3498DB"
+
+                    app:progress_unreached_bar_height="0.75dp"
+                    app:progress_reached_bar_height="1.5dp"
+
+                    app:progress_text_size="10sp"
+                    app:progress_text_color="#FFFFFF"
+                    app:progress_text_offset="1dp"
+                    app:progress_text_visibility="visible"
+
+                    app:progress_max="100"
+                    app:progress_current="0"
+                    />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
